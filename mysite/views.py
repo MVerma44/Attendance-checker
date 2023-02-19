@@ -18,6 +18,7 @@ def index(request):
     print(lecture, total)
 
     # percentage = (lec/tot) * 100
+    count = 0
     for i in range(1, 25):
         if ((int(lecture)/int(total)) * 100) < 75:
             if ((int(lecture)+i) / (int(total)+i)) * 100 >= 75:
@@ -25,9 +26,18 @@ def index(request):
                 break
 
         else: 
-            print("Attendance already above 75%")
+            count = 0
+            for j in range(1, 10):
+                if ((lecture / (total+j)) * 100) >= 75:
+                    count += 1
+
+            if count == 0:
+                print("Oops!!! you can not bunk any class")
+            
+            else:
+                print(f"{count} class you can bunk to maintain attendance above 75%")
             break
 
-    return render(request, 'result.html', {'result':i, 'default':'Attendance already above 75%'})
+    return render(request, 'result.html', {'result':i, 'remain':count, 'default':'Attendance already above 75%'})
 
     # return HttpResponseRedirect('index.html')
