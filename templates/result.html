@@ -26,18 +26,23 @@
   <body>
     <!-- <h1>Result page: {{result}}</h1> -->
     {% if result < 2 %}
-    <h2 class="res">Have attendance above 75%.</h2>
+    <h2 class="res">Your attendance is already above 75%.<br>
+      You may skip {{remain}} class.</h2>
     <button type="button" class="btn btn-outline-info" style="margin-top: 1em;">
         <a href="/" style="text-decoration: none; color: black; font-size: medium; font-weight: 400;">Return</a>
     </button>
 
+    
     {% else %}
     <h2 class="res">
-      {{result}} continuous classes needed to get attendance above 75%.
+      To attain attendance exceeding 75%, you have to attend {{result}} consecutive classes.
     </h2>
     <button type="button" class="btn btn-outline-info" style="margin-top: 1em;">
         <a href="/" style="text-decoration: none; color: black; font-size: medium; font-weight: 400;">Return</a>
     </button>
+
+
+
     {% endif %}
   </body>
 </html>
