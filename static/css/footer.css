@@ -1,0 +1,75 @@
+body {
+  background-color: #dee9ff;
+}
+
+.text{
+    /* padding: 5.7em 16px; */
+    padding: 4.9em 16px 4em 16px;
+    color: rgba(0, 0, 0, 0.637);
+    font-size: larger;
+}
+
+/* footer */
+.mb-5,
+.my-5 {
+  margin-bottom: -1rem !important;
+  margin-top: 0rem !important;
+  padding: 0px 0px !important;
+}
+
+.mb-4 {
+    margin-bottom: 0.5rem!important;
+}
+
+a{
+    text-decoration: none;
+}
+
+.pb-0 {
+    padding: 24px !important;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background: rgb(52,58,64);
+  /* margin-bottom: -408px; */
+}
+
+@media (max-width: 576px) {
+  .registration-form form {
+    padding: 25px 20px;
+  }
+}
+
+.registration-form .form-icon {
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  line-height: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+  .registration-form form {
+    margin: 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .registration-form form {
+    margin: 20px 20px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .registration-form form {
+    margin: 25px 20px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .registration-form form {
+    /* margin: 50px 50px; */
+  }
+}

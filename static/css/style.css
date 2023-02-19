@@ -3,7 +3,8 @@ body {
 }
 
 .registration-form {
-  padding: 5.4em 0px;
+  /* padding: 5.4em 0px; */
+  padding: 2em 0px 2em 0px;
 }
 
 .registration-form form {
@@ -46,6 +47,27 @@ body {
   border: none;
   color: white;
   margin-top: 20px;
+}
+
+/* footer */
+.mb-5, .my-5 {
+  margin-bottom: -1rem !important;
+  margin-top: 0rem !important;
+  padding: 0px 0px !important;
+}
+
+.mb-4, .my-4 {
+  margin-bottom: 0rem !important;
+}
+
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* margin-bottom: -408px; */
 }
 
 @media (max-width: 576px) {
