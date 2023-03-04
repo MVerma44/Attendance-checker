@@ -19,7 +19,7 @@ def index(request):
 
     # percentage = (lec/tot) * 100
     count = 0
-    for i in range(1, 25):
+    for i in range(1, 50):
         if ((int(lecture)/int(total)) * 100) < 75:
             if ((int(lecture)+i) / (int(total)+i)) * 100 >= 75:
                 print(f"{i} continuous classes")
@@ -27,7 +27,7 @@ def index(request):
 
         else: 
             count = 0
-            for j in range(1, 10):
+            for j in range(1, 50):
                 if ((lecture / (total+j)) * 100) >= 75:
                     count += 1
 

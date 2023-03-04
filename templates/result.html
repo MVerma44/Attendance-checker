@@ -6,43 +6,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Result</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/footer.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <style>
       body {
-        
-        background-color: #dee9ff;
+        /* background-color: #dee9ff; */
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif;
-        color: rgba(0, 0, 0, 0.637);
-        padding: 9.85em 15px;
-        text-align: center;   
-        font-size: larger;
+        /* color: rgba(0, 0, 0, 0.637); */
+        /* padding: 6.5em 15px; */
+        text-align: center;
       }
     </style>
   </head>
 
   <body>
     <!-- <h1>Result page: {{result}}</h1> -->
-    {% if result < 2 %}
-    <h2 class="res">Your attendance is already above 75%.<br>
-      You may skip {{remain}} class.</h2>
-    <button type="button" class="btn btn-outline-info" style="margin-top: 1em;">
-        <a href="/" style="text-decoration: none; color: black; font-size: medium; font-weight: 400;">Return</a>
-    </button>
+    <div class="text">
+      {% if result < 2 %}
+      <h2 class="res">
+        Your attendance is already above 75%.<br />
+        You may skip {{remain}} class.
+      </h2>
+      <button
+        type="button"
+        class="btn btn-outline-info"
+        style="margin-top: 4em"
+      >
+        <a
+          href="/"
+          style="
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            font-weight: 400;
+          "
+          >Return</a
+        >
+      </button>
 
-    
-    {% else %}
-    <h2 class="res">
-      To attain attendance exceeding 75%, you have to attend {{result}} consecutive classes.
-    </h2>
-    <button type="button" class="btn btn-outline-info" style="margin-top: 1em;">
-        <a href="/" style="text-decoration: none; color: black; font-size: medium; font-weight: 400;">Return</a>
-    </button>
+      {% else %}
+      <h2 class="res">
+        To attain attendance exceeding 75%,<br />
+        you have to attend {{result}} consecutive classes.
+      </h2>
+      <button
+        type="button"
+        class="btn btn-outline-info"
+        style="margin-top: 3em"
+      >
+        <a
+          href="/"
+          style="
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            font-weight: 400;
+          "
+          >Return</a
+        >
+      </button>
+      {% endif %}
+    </div>
 
-
-
-    {% endif %}
+    <!-- Footer -->
+    <div class="f">
+      <div class="container my-5">
+        <footer class="bg-dark text-center text-white">
+          <div class="container p-4 pb-0">
+            <section class="mb-4">
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="https://www.instagram.com/vmayank_007/"
+                role="button"
+                target="_blank"
+                ><i class="bi bi-instagram"></i>
+              </a>
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="https://www.linkedin.com/in/mayank-v-946404131"
+                role="button"
+                target="_blank"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="https://github.com/MVerma44"
+                role="button"
+                target="_blank"
+                ><i class="bi-github"></i
+              ></a>
+            </section>
+          </div>
+          <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+          >
+            Developer:
+            <a class="text-white" href=" ">Mayank Verma</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- End of .container -->
   </body>
 </html>
